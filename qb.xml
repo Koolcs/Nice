@@ -4,7 +4,6 @@
   <Repository>linuxserver/qbittorrent</Repository>
   <Registry>https://hub.docker.com/r/linuxserver/qbittorrent/</Registry>
   <TemplateURL>https://github.com/Koolcs/Nice/qbitorrent.xml</TemplateURL>
-  <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support>https://github.com/Koolcs/Nice</Support>
   <Project>https://www.qbittorrent.org/</Project>
@@ -46,21 +45,24 @@
       <Value>100</Value>
     </Variable>
   </Environment>
-  <Publish>
-    <Port>
-     <HostPort>6881</HostPort>
-     <ContainerPort>6881</ContainerPort>
-     <Protocol>tcp</Protocol>
-    </Port>
-    <Port>
-     <HostPort>6881</HostPort>
-     <ContainerPort>6881</ContainerPort>
-     <Protocol>udp</Protocol>
-    </Port>
-    <Port>
-     <HostPort>8080</HostPort>
-     <ContainerPort>8080</ContainerPort>
-     <Protocol>tcp</Protocol>
-    </Port>	  
-  </Publish>  
+<Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6881</HostPort>
+        <ContainerPort>6881</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6881</HostPort>
+        <ContainerPort>6881</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
 </Containers>
