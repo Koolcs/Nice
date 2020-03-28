@@ -11,7 +11,7 @@
   <Category/>
   <WebUI>http://[IP]:[PORT:8001]</WebUI>
   <TemplateURL/>
-  <Icon>https://github.com/Koolcs/Nice/blob/master/image/seafile-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Koolcs/Nice/master/image/seafile-icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
