@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-  <TemplateURL>https://github.com/Koolcs/Nice/qbitorrent.xml</TemplateURL>
+  <TemplateURL>https://github.com/Koolcs/Nice/blob/master/qbitorrent.xml</TemplateURL>
   <Beta>False</Beta>
   <Category></Category>
   <Name>qbitorrent</Name>
