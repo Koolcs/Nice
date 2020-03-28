@@ -1,51 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-  <TemplateURL>https://github.com/Koolcs/Nice/qbitorrent.xml</TemplateURL>
-  <Beta>False</Beta>
-  <Category></Category>
   <Name>qbitorrent</Name>
-  <Description>
-  </Description>
-  <Overview>
-qbitorrent
-  </Overview>
-  <Support>https://github.com/Koolcs/Nice</Support>
-  <Registry>https://hub.docker.com/r/linuxserver/qbittorrent/</Registry>
-  <GitHub>https://github.com/Koolcs/Nice</GitHub>
   <Repository>linuxserver/qbittorrent</Repository>
-  <Project>https://www.qbittorrent.org/</Project>
-  <BindTime>true</BindTime>
+  <Registry>https://hub.docker.com/r/linuxserver/qbittorrent/</Registry>
+  <TemplateURL>https://github.com/Koolcs/Nice/qbitorrent.xml</TemplateURL>
+  <Network>bridge</Network>
   <Privileged>false</Privileged>
-    <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>6881</HostPort>
-        <ContainerPort>6881</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>6881</HostPort>
-        <ContainerPort>6881</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>8080</HostPort>
-        <ContainerPort>8080</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>	  
-    </Publish>
-    </Networking>
-  <Environment>
-    <Variable>
-      <Name>PUID</Name>
-      <Value>99</Value>
-    </Variable>
-    <Variable>
-      <Name>PGID</Name>
-      <Value>100</Value>
-    </Variable>
-  </Environment>
+  <Support>https://github.com/Koolcs/Nice</Support>
+  <Project>https://www.qbittorrent.org/</Project>
+  <Overview>qbitorrent</Overview>
+  <Description>
+	默风地址 https://github.com/Koolcs/Nice
+  </Description>
+  <Category></Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Icon>https://github.com/Koolcs/Nice/blob/master/image/qbittorrent-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description></Description>
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/qbittorrent</HostDir>
@@ -57,11 +33,32 @@ qbitorrent
       <ContainerDir>/downloads</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-  </Data>
-  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <Icon>https://github.com/Koolcs/Nice/blob/master/image/qbittorrent-icon.png</Icon>
-  <DonateText></DonateText>
-  <DonateLink></DonateLink>
-  <DonateImg></DonateImg>
-  <ExtraParams></ExtraParams>
+  </Data>  
+  <Environment>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Publish>
+    <Port>
+     <HostPort>6881</HostPort>
+     <ContainerPort>6881</ContainerPort>
+     <Protocol>tcp</Protocol>
+    </Port>
+    <Port>
+     <HostPort>6881</HostPort>
+     <ContainerPort>6881</ContainerPort>
+     <Protocol>udp</Protocol>
+    </Port>
+    <Port>
+     <HostPort>8080</HostPort>
+     <ContainerPort>8080</ContainerPort>
+     <Protocol>tcp</Protocol>
+    </Port>	  
+  </Publish>  
 </Containers>
