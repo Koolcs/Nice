@@ -44,7 +44,7 @@
       <HostDir>/mnt/user/data/mysql/mariadb.cnf</HostDir>
       <ContainerDir>/etc/mysql/conf.d/mariadb.cnf</ContainerDir>
       <Mode>rw</Mode>
-    </Volume
+    </Volume>
   </Data>
   <Environment>
     <Variable>
