@@ -40,6 +40,11 @@
       <ContainerDir>/var/lib/mysql</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+	<Volume>
+      <HostDir>/mnt/user/data/mysql/mariadb.cnf</HostDir>
+      <ContainerDir>/etc/mysql/conf.d/mariadb.cnf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume
   </Data>
   <Environment>
     <Variable>
