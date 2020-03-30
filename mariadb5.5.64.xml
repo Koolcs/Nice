@@ -35,6 +35,11 @@
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+	<Volume>
+      <HostDir>/mnt/user/data/mysql/data</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <Environment>
     <Variable>
@@ -48,7 +53,7 @@
       <Mode/>
     </Variable>
     <Variable>
-      <Value>0</Value>
+      <Value>password</Value>
       <Name>MYSQL_ROOT_PASSWORD</Name>
       <Mode/>
     </Variable>
